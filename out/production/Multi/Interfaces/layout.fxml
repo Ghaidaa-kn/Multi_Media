@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane style="-fx-background-color:#7986cb" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interfaces.Controller">
+
+    <VBox prefHeight="195.0" prefWidth="800.0" style="-fx-background-color: #9fa8da">
+        <HBox translateX="10"  translateY="30">
+            <Button fx:id="buttonCompressFiles" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #fbe9e7;" textFill="black" text=" File " translateX="250" />
+            <Button fx:id="buttonCompressDirs" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: #fbe9e7;" textFill="black" text=" Directory " translateX="300" />
+        </HBox>
+        <HBox prefHeight="140.0" prefWidth="690.0" translateX="100" translateY="40">
+            <VBox fx:id="vBoxDirs">
+
+
+<!--                <Button fx:id="buttonCompressLZW" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #fbe9e7;" text="LZW Comp_Dir" textFill="#000000" translateY="30" translateX="-10" />-->
+                <Button fx:id="buttonCompressShannonFano" lineSpacing="3.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #fbe9e7;" text="Shannon Comp_Dir" textFill="#000000" translateY="71" translateX="-20" />
+
+            </VBox>
+
+            <VBox fx:id="vBoxFiles" prefHeight="156.0" prefWidth="169.0" visible="true">
+
+                <Button fx:id="buttonCompressLZWFile" prefWidth="160.0" text="LZW Compress" translateY="30" textFill="#000000" style="-fx-background-color: #fbe9e7;" />
+                <Button fx:id="buttonCompressShannonFanoFile" prefWidth="160.0" text="Shannon Fano Compress" translateY="45" textFill="#000000" style="-fx-background-color: #fbe9e7;"/>
+
+            </VBox>
+
+            <VBox>
+
+                <Button fx:id="buttonDecompressLZW" style="-fx-background-color: #fbe9e7;" text="LZW Decompress" textFill="#000000" translateY="30" />
+                <Button fx:id="buttonDecompressShannonFano" prefHeight="25.0" prefWidth="177.0" style="-fx-background-color: #fbe9e7;" text="Shannon Fano Decompress" textFill="#000000" translateY="45" />
+
+            </VBox>
+            <VBox prefHeight="726.0" prefWidth="140.0">
+                <Button fx:id="buttonjpeg1" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #fbe9e7;" textFill="black" text=" JPEG Compress " translateX="20" translateY="70"/>
+            </VBox>
+        </HBox>
+
+    </VBox>
+    <Label fx:id="labelCompressionRatio" alignment="CENTER" prefHeight="50.0" prefWidth="700.0" text="THE RATIO " textAlignment="RIGHT" textFill="#ffab91" GridPane.rowIndex="2">
+        <font>
+            <Font size="40.0" />
+        </font></Label>
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+</GridPane>
